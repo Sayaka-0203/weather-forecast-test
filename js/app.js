@@ -25,7 +25,10 @@ fetch(url)
         document.getElementById("today").lastElementChild.textContent = area.weathers[0];
         document.getElementById("tomorrow").lastElementChild.textContent = area.weathers[1];
         document.getElementById("dayAfterTomorrow").lastElementChild.textContent = area.weathers[2];
-    });
+    })
+    .catch (function(error) {
+      alert(error.message);
+    })
   });
 
 
